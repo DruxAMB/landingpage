@@ -7,7 +7,7 @@ import Image from "next/image";
 export const About = (): React.ReactElement => {
   return (
     <div className="w-full bg-[#E30613] text-white">
-      <div className="max-w-[1440px] mx-auto py-16 px-4 md:px-8 lg:px-16 xl:px-40">
+      <div className="max-w-[1440px] w-full mx-auto py-16 px-4 md:px-8 lg:px-16 xl:px-40">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* Left content */}
           <div className="w-full md:w-1/2 space-y-6 pr-0 md:pr-8">

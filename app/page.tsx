@@ -7,11 +7,10 @@ import { Partner } from "@/components/home/Partner";
 import { Contact } from "@/components/home/Contact";
 
 export default function Home() {
-
   return (
-    <div className="max-w-[1440px] justify-center mx-auto">
-        <Navbar />
-        <Hero />
+    <div className="w-full">
+      <Navbar />
+      <Hero />
       <Welcome />
       <About />
       <Team />
