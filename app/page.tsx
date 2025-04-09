@@ -4,6 +4,7 @@ import { Welcome } from "@/components/home/Welcome";
 import { About } from "@/components/home/About";
 import { Team } from "@/components/home/Team";
 import { Partner } from "@/components/home/Partner";
+import { Contact } from "@/components/home/Contact";
 
 export default function Home() {
 
@@ -15,6 +16,7 @@ export default function Home() {
       <About />
       <Team />
       <Partner />
+      <Contact />
     </div>
   );
 }

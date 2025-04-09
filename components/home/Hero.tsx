@@ -86,7 +86,7 @@ import {
           </main>
   
           {/* Chat button */}
-          <div className="fixed bottom-6 right-6">
+          <div className="fixed bottom-6 right-6 z-20">
               <MessagesSquare className="w-12 h-12 md:w-16 md:h-16 text-[#FDA4AF] hover:text-[#F43F5E] rounded-full bg-[#F43F5E] hover:bg-[#FDA4AF] shadow-[0px_4px_8px_#6b728014] p-4 cursor-pointer" />
           </div>
   
