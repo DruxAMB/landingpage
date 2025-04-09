@@ -21,7 +21,7 @@ export const Navbar = () => {
     { label: "Help", active: false },
   ];
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm px-4 md:px-8 lg:px-16 xl:px-40">
       <div className="flex items-center justify-between h-20">
         {/* Logo */}
         <img

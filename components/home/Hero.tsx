@@ -13,7 +13,7 @@ import {
   
     return (
       <div className="bg-white min-h-screen pt-16">
-        <div className="mx-auto relative max-h-screen">
+        <div className="mx-auto relative max-h-screen px-4 md:px-8 lg:px-16 xl:px-40">
           {/* Background blur effect */}
           <div className="absolute w-full md:w-2/3 aspect-square top-[10%] left-1/2 -translate-x-1/2 bg-[#fecdd326] rounded-full blur-[100px] pointer-events-none" />
   
