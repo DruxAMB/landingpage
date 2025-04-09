@@ -27,7 +27,7 @@ export const Navbar = () => {
         <img
           className="max-w-[203px] h-auto object-contain"
           alt="Chapa logo"
-          src="/chapa-removebg-preview-1.png"
+          src="logo.png"
         />
 
         {/* Desktop Navigation */}
