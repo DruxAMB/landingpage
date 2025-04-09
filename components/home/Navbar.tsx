@@ -32,7 +32,7 @@ export const Navbar = () => {
           alt="Chapa logo"
           height={100}
           width={100}
-          src="logo.png"
+          src="/logo.png"
         />
 
         {/* Desktop Navigation */}
