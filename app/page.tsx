@@ -3,6 +3,7 @@ import { Navbar } from "@/components/home/Navbar";
 import { Welcome } from "@/components/home/Welcome";
 import { About } from "@/components/home/About";
 import { Team } from "@/components/home/Team";
+import { Partner } from "@/components/home/Partner";
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Welcome />
       <About />
       <Team />
+      <Partner />
     </div>
   );
 }
