@@ -2,7 +2,6 @@
 
 import {
     ChevronDownIcon,
-    MessageSquareIcon,
     MessagesSquare,
     Settings2Icon,
   } from "lucide-react";

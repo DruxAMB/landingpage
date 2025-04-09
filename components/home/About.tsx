@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export const About = (): React.ReactElement => {
   return (
@@ -18,7 +19,7 @@ export const About = (): React.ReactElement => {
             </p>
             
             <p className="text-xl font-normal mt-6">
-              We're building a future where paying for cabs and Boda Bodas is as easy as 
+              We&apos;re building a future where paying for cabs and Boda Bodas is as easy as 
               tapping a button, powered by blockchain but accessible to everyone, 
               even without crypto knowledge.
             </p>
@@ -33,7 +34,9 @@ export const About = (): React.ReactElement => {
           {/* Right image */}
           <div className="w-full md:w-1/2">
             <div className="rounded-lg overflow-hidden">
-              <img 
+              <Image
+              height={100}
+              width={100}
                 src="/boda-riders.svg" 
                 alt="Boda Boda riders on motorcycles" 
                 className="w-full h-auto object-cover"
