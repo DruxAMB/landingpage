@@ -9,6 +9,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { MenuIcon, X } from "lucide-react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,9 +27,11 @@ export const Navbar = () => {
 
       <div className="flex items-center justify-between h-20">
         {/* Logo */}
-        <img
+        <Image
           className="max-w-[203px] h-auto object-contain"
           alt="Chapa logo"
+          height={100}
+          width={100}
           src="logo.png"
         />
 

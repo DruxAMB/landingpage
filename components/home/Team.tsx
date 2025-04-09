@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 interface TeamMemberProps {
@@ -13,10 +14,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({ imageSrc, name, role }) => {
     <div className="flex flex-col">
       <div className="bg-[#FFF5F5] aspect-square w-full rounded-lg overflow-hidden">
         {imageSrc && (
-          <img 
+          <Image 
             src={imageSrc} 
             alt={name || "Team member"} 
             className="w-full h-full object-cover"
+            height={100}
+            width={100}
           />
         )}
       </div>
