@@ -3,6 +3,7 @@
 import {
     ChevronDownIcon,
     MessageSquareIcon,
+    MessagesSquare,
     Settings2Icon,
   } from "lucide-react";
   import React, { JSX } from "react";
@@ -12,7 +13,7 @@ import {
   export const Hero = (): JSX.Element => {
   
     return (
-      <div className="bg-white min-h-screen pt-16">
+      <div className="bg-white pt-16 mb-20">
         <div className="mx-auto relative max-h-screen px-4 md:px-8 lg:px-16 xl:px-40">
           {/* Background blur effect */}
           <div className="absolute w-full md:w-2/3 aspect-square top-[10%] left-1/2 -translate-x-1/2 bg-[#fecdd326] rounded-full blur-[100px] pointer-events-none" />
@@ -87,16 +88,11 @@ import {
   
           {/* Chat button */}
           <div className="fixed bottom-6 right-6">
-            <Button
-              size="icon"
-              className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white shadow-[0px_4px_8px_#6b728014]"
-            >
-              <MessageSquareIcon className="w-6 h-6 md:w-10 md:h-10" />
-            </Button>
+              <MessagesSquare className="w-12 h-12 md:w-16 md:h-16 text-[#FDA4AF] hover:text-[#F43F5E] rounded-full bg-[#F43F5E] hover:bg-[#FDA4AF] shadow-[0px_4px_8px_#6b728014] p-4 cursor-pointer" />
           </div>
   
           {/* Status indicator */}
-          <div className="flex items-center text-sm">
+          <div className="flex items-center text-sm mt-20 absolute left-6">
             <span className="font-medium text-rose-500">CHR </span>
             <span className="font-medium text-rose-300">$24.19</span>
   
