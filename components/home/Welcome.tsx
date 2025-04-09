@@ -15,8 +15,14 @@ export const Welcome = (): React.ReactElement => {
           we are building for the ride hailing industry.
         </p>
         
-        <div className="w-full max-w-3xl aspect-video bg-gray-200 flex items-center justify-center">
-          <p className="text-2xl text-gray-600">demo video</p>
+        <div className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden">
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/0GB-zcBQezo?si=UrQiXijX6MfJpNTV"
+            title="Chaapa Ride Introduction"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>
