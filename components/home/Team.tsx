@@ -31,9 +31,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({ imageSrc, name, role }) => {
 
 export const Team = (): React.ReactElement => {
   const teamMembers = [
-    { id: 1, imageSrc: "/team-member-1.svg" },
-    { id: 2, imageSrc: "/team-member-2.svg" },
-    { id: 3, imageSrc: "/team-member-3.svg" },
+    { id: 1, imageSrc: "/kodjo.png" },
+    { id: 2, imageSrc: "/diana.png" },
+    { id: 3, imageSrc: "/druxamb.png" },
   ];
 
   return (
