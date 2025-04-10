@@ -24,7 +24,7 @@ export const Contact = (): React.ReactElement => {
           variants={fadeInLeft}
           className="bg-[#E30613] text-white py-16 px-4 md:px-8 lg:px-16 xl:px-40 flex flex-col items-center md:items-end justify-center text-center md:text-left"
         >
-          <div className="max-w-md">
+          <div className="max-w-md text-right">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -63,15 +63,24 @@ export const Contact = (): React.ReactElement => {
           variants={fadeInRight}
           className="bg-white py-16 px-4 md:px-8 lg:px-16 xl:px-40 flex flex-col items-center md:items-start"
         >
-          <div className="max-w-md">
+          <div className="max-w-md w-full border rounded-lg p-5">
             <motion.h3 
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-2xl font-medium mb-8"
+              className="text-2xl font-medium mb-3"
+            >
+              Contact Us
+            </motion.h3>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="text-gray-600 mb-6"
             >
               We would love to hear from you.
-            </motion.h3>
+            </motion.p>
             
             <motion.form 
               initial={{ opacity: 0 }}
@@ -88,8 +97,8 @@ export const Contact = (): React.ReactElement => {
                 <Input 
                   id="email"
                   type="email" 
-                  className="w-full bg-gray-200 border-0 rounded-md p-3" 
-                  placeholder="Your email address"
+                  className="w-full border border-gray-200 rounded-md p-3" 
+                  placeholder=""
                 />
               </motion.div>
               
@@ -102,8 +111,8 @@ export const Contact = (): React.ReactElement => {
                 <Input 
                   id="subject"
                   type="text" 
-                  className="w-full bg-gray-200 border-0 rounded-md p-3" 
-                  placeholder="Subject of your message"
+                  className="w-full border border-gray-200 rounded-md p-3" 
+                  placeholder=""
                 />
               </motion.div>
               
@@ -115,20 +124,36 @@ export const Contact = (): React.ReactElement => {
                 <label htmlFor="message" className="block text-gray-700 mb-2">Leave a message</label>
                 <Textarea 
                   id="message"
-                  className="w-full bg-gray-200 border-0 rounded-md p-3 min-h-[150px]" 
-                  placeholder="Your message"
+                  className="w-full border border-gray-200 rounded-md p-3 min-h-[150px]" 
+                  placeholder=""
                 />
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ delay: 0.7, duration: 0.6 }}
+                className="flex items-center gap-2 mb-4"
+              >
+                <input 
+                  type="checkbox" 
+                  id="subscribe" 
+                  className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+                />
+                <label htmlFor="subscribe" className="text-sm text-gray-700">
+                  Subscribe me to your newsletter
+                </label>
               </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="text-right"
+                transition={{ delay: 0.8, duration: 0.6 }}
+                className="w-full"
               >
                 <Button 
                   type="submit"
-                  className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium px-10 py-2 h-auto rounded-md"
+                  className="w-full bg-[#E30613] hover:bg-[#c00510] text-white font-medium py-2 h-auto rounded-md"
                 >
                   Submit
                 </Button>
