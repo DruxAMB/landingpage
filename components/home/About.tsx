@@ -60,7 +60,7 @@ export const About = (): React.ReactElement => {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="pt-4"
             >
-              <Button className="bg-white hover:bg-gray-100 text-[#E30613] font-semibold px-8 py-2 h-auto rounded-md text-lg">
+              <Button className="bg-white hover:bg-gray-100 text-[#E30613] font-semibold px-8 py-2 h-auto rounded-md text-lg cursor-pointer">
                 Join our Waitlist
               </Button>
             </motion.div>

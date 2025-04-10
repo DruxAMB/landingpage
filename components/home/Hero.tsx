@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { fadeInLeft, fadeInRight } from "@/animations/variants";
+import { Input } from "../ui/input";
 
 export const Hero = (): JSX.Element => {
   return (
@@ -69,7 +70,7 @@ export const Hero = (): JSX.Element => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <Button className="w-full md:w-[189px] h-[46px] rounded-[10px] bg-rose-500 text-white mt-8">
+                <Button className="w-full md:w-[189px] h-[46px] rounded-[10px] bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 cursor-pointer text-white mt-8">
                   Join our Waitlist
                 </Button>
               </motion.div>
@@ -110,9 +111,7 @@ export const Hero = (): JSX.Element => {
               >
                 <Card className="bg-gray-50 border-[0.6px] rounded-xl mb-4">
                   <CardContent className="p-4 flex items-center justify-between">
-                    <span className="font-medium text-gray-600 text-base">
-                      Location
-                    </span>
+                    <Input className="w-full font-medium text-gray-600 text-base" placeholder="Location" />
                   </CardContent>
                 </Card>
               </motion.div>
@@ -124,15 +123,7 @@ export const Hero = (): JSX.Element => {
               >
                 <Card className="bg-gray-50 border-[0.6px] rounded-xl mb-4">
                   <CardContent className="p-4 flex items-center justify-between">
-                    <span className="font-medium text-gray-600 text-base">
-                      Destination
-                    </span>
-                    <div className="h-[25px] rounded-[10px] flex items-center bg-rose-500 px-2.5 py-1">
-                      <span className="font-medium text-white text-sm mr-2">
-                        Country
-                      </span>
-                      <ChevronDownIcon className="w-[11px] h-2.5 text-white" />
-                    </div>
+                    <Input className="w-full font-medium text-gray-600 text-base" placeholder="Destination" />
                   </CardContent>
                 </Card>
               </motion.div>
@@ -142,7 +133,7 @@ export const Hero = (): JSX.Element => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
               >
-                <Button className="w-full h-[45px] bg-white border border-rose-500 text-rose-500 font-medium text-lg rounded-[10px]">
+                <Button className="w-full h-[45px] bg-white border border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white font-medium text-lg rounded-[10px] cursor-pointer">
                   View Prices
                 </Button>
               </motion.div>

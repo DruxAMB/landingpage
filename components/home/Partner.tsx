@@ -75,7 +75,7 @@ export const Partner = (): React.ReactElement => {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
               >
-                <Button className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium text-xl px-10 py-4 h-auto rounded-md mt-6">
+                <Button className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium text-xl px-10 py-4 h-auto rounded-md mt-6 cursor-pointer">
                   Schedule a call
                 </Button>
               </motion.div>

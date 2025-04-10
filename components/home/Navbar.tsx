@@ -66,13 +66,13 @@ export const Navbar = () => {
 
         {/* Connect button and menu */}
         <div className="hidden md:flex items-center gap-4">
-          <Button className="rounded-[10px] bg-gradient-to-t from-[rgba(237,2,2,1)] to-[rgba(253,164,175,1)]">
+          <Button className="rounded-[10px] bg-gradient-to-t from-[rgba(237,2,2,1)] to-[rgba(253,164,175,1)] cursor-pointer">
             Connect
           </Button>
           <Button
             variant="outline"
             size="icon"
-            className="w-[52px] h-[37px] bg-gray-100 border-none rounded-[10px]"
+            className="w-[52px] h-[37px] bg-gray-100 border-none rounded-[10px] cursor-pointer"
           >
             <div className="flex gap-2">
               <div className="w-1 h-1 bg-gray-500 rounded-sm" />
@@ -98,7 +98,7 @@ export const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <Button className="mt-4 w-full rounded-[10px] bg-gradient-to-t from-[rgba(237,2,2,1)] to-[rgba(253,164,175,1)]">
+            <Button className="mt-4 w-full rounded-[10px] bg-gradient-to-t from-[rgba(237,2,2,1)] to-[rgba(253,164,175,1)] cursor-pointer">
               Connect
             </Button>
           </nav>
