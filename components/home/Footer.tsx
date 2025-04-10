@@ -165,7 +165,7 @@ export const Footer = (): React.ReactElement => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <Button className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium px-6 py-2 h-auto rounded-md">
+              <Button className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium px-8 py-4 h-auto rounded-md cursor-pointer" onClick={() => window.location.href = "https://tally.so/r/w4OkD5"}>
                 Join our Waitlist
               </Button>
             </motion.div>

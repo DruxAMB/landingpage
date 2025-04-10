@@ -70,7 +70,7 @@ export const Hero = (): JSX.Element => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
               >
-                <Button className="w-full md:w-[189px] h-[46px] rounded-[10px] bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 cursor-pointer text-white mt-8">
+                <Button className="w-full md:w-[189px] h-[46px] rounded-[10px] bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 cursor-pointer text-white mt-8" onClick={() => window.location.href = "https://tally.so/r/w4OkD5"}>
                   Join our Waitlist
                 </Button>
               </motion.div>
