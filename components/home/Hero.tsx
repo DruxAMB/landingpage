@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  ChevronDownIcon,
   MessagesSquare,
   Settings2Icon,
 } from "lucide-react";

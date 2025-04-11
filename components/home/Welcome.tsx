@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { fadeIn, fadeInUp, scaleUp } from "@/animations/variants";
+import { fadeInUp, scaleUp } from "@/animations/variants";
 
 export const Welcome = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
