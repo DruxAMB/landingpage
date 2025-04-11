@@ -48,16 +48,16 @@ export const Footer = (): React.ReactElement => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="flex space-x-4"
             >
-              <Link href="https://twitter.com/chaapa" target="_blank" className="text-gray-500 hover:text-gray-700">
+              <Link href="https://twitter.com/chaaparide" target="_blank" className="text-gray-500 hover:text-gray-700">
                 <Twitter size={20} />
               </Link>
-              <Link href="https://instagram.com/chaapa" target="_blank" className="text-gray-500 hover:text-gray-700">
+              <Link href="https://instagram.com/chaaparide" target="_blank" className="text-gray-500 hover:text-gray-700">
                 <Instagram size={20} />
               </Link>
-              <Link href="https://youtube.com/chaapa" target="_blank" className="text-gray-500 hover:text-gray-700">
+              <Link href="https://youtube.com/chaaparide" target="_blank" className="text-gray-500 hover:text-gray-700">
                 <Youtube size={20} />
               </Link>
-              <Link href="https://linkedin.com/company/chaapa" target="_blank" className="text-gray-500 hover:text-gray-700">
+              <Link href="https://linkedin.com/company/chaaparide" target="_blank" className="text-gray-500 hover:text-gray-700">
                 <Linkedin size={20} />
               </Link>
             </motion.div>
