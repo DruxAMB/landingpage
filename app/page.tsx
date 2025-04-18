@@ -6,6 +6,7 @@ import { Team } from "@/components/home/Team";
 import { Boda } from "@/components/home/Boda";
 import { Contact } from "@/components/home/Contact";
 import { Footer } from "@/components/home/Footer";
+import { Join } from "@/components/home/Join";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Boda />
       <About />
       <Welcome />
+      <Join />
       <Team />
       <Contact />
       <Footer />
