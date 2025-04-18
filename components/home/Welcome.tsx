@@ -35,7 +35,7 @@ export const Welcome = (): React.ReactElement => {
         >
           Chaapa Ride took home 10,000 USD at the ETiHopia Builders Residency, a
           huge win that fuels our vision for the future of ride-hailing across
-          Africa. Watch our demo video below to see what and why we're building.
+          Africa. Watch our demo video below to see what and why we&apos;re building.
         </motion.p>
         <motion.div
           initial="hidden"

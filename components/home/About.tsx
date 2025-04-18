@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -51,7 +50,7 @@ export const About = (): React.ReactElement => {
           variants={fadeInRight}
           className="w-full md:w-1/2 flex flex-col gap-6"
         >
-          {features.map((feature, idx) => (
+          {features.map((feature) => (
             <div
               key={feature.title}
               className="bg-white rounded-xl shadow-md px-6 py-5 text-left transition-transform duration-200 hover:shadow-lg hover:-translate-y-1 cursor-default border border-[#F4F4F4]"

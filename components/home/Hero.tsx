@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  MessagesSquare,
-  Settings2Icon,
-} from "lucide-react";
 import React, { JSX } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
-import { fadeInLeft, fadeInRight } from "@/animations/variants";
-import { Input } from "../ui/input";
 
 export const Hero = (): JSX.Element => {
   return (
