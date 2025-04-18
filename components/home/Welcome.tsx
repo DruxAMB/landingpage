@@ -7,39 +7,42 @@ import { fadeInUp, scaleUp } from "@/animations/variants";
 
 export const Welcome = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
-  
+
   return (
-    <motion.div 
+    <motion.section
       ref={ref}
-      className="w-full py-16 px-4 md:px-8 mt-40 md:mt-0 flex flex-col items-center text-center"
+      className="w-full min-h-[80vh] flex flex-col items-center justify-center text-center px-4 py-20 md:py-32"
+      style={{
+        background:
+          "radial-gradient(circle at 50% 50%, #FFA9A9 10%, #B30202 100%)",
+      }}
     >
-      <div className="max-w-[1440px] mx-auto">
-        <motion.h1 
+      <div className="max-w-3xl mx-auto flex flex-col items-center">
+        <motion.h1
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={fadeInUp}
-          className="text-4xl md:text-5xl font-bold mb-4"
+          className="text-white text-3xl md:text-5xl font-extrabold mb-4 md:mb-6"
         >
-          Welcome to <span className="text-rose-500">Chaapa Ride</span>
+          You are dealing with champs!
         </motion.h1>
-        
-        <motion.p 
+        <motion.p
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={fadeInUp}
           transition={{ delay: 0.2 }}
-          className="text-lg md:text-xl max-w-3xl mb-12"
+          className="text-white text-base font-medium mb-12 max-w-3xl mx-auto"
         >
-          Watch and introduction video of who we are at Chaapa Ride, and the community 
-          we are building for the ride hailing industry.
+          Chaapa Ride took home 10,000 USD at the ETiHopia Builders Residency, a
+          huge win that fuels our vision for the future of ride-hailing across
+          Africa. Watch our demo video below to see what and why we're building.
         </motion.p>
-        
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={scaleUp}
           transition={{ delay: 0.4 }}
-          className="w-full max-w-3xl aspect-video rounded-lg overflow-hidden"
+          className="w-full max-w-2xl aspect-video rounded-2xl bg-gray-200 mx-auto flex items-center justify-center overflow-hidden"
         >
           <iframe
             className="w-full h-full"
@@ -47,9 +50,9 @@ export const Welcome = (): React.ReactElement => {
             title="Chaapa Ride Introduction"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-          ></iframe>
+          ></iframe>{" "}
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
