@@ -10,6 +10,60 @@ import { fadeInLeft, fadeInRight } from "@/animations/variants";
 
 export const Contact = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
+  const [formData, setFormData] = React.useState({
+    email: '',
+    subject: '',
+    message: '',
+    subscribe: false
+  });
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitSuccess, setSubmitSuccess] = React.useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      subscribe: e.target.checked
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Construct mailto URL
+    const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
+    const body = encodeURIComponent(
+      `Message from: ${formData.email}\n\n${formData.message}\n\n${formData.subscribe ? 'Please add me to your newsletter.' : ''}`
+    );
+    
+    // Open mailto link
+    window.location.href = `mailto:chaaparide@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Show success message and reset form
+    setTimeout(() => {
+      setSubmitSuccess(true);
+      setIsSubmitting(false);
+      setFormData({
+        email: '',
+        subject: '',
+        message: '',
+        subscribe: false
+      });
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    }, 1000);
+  };
   
   return (
     <motion.div 
@@ -82,7 +136,18 @@ export const Contact = (): React.ReactElement => {
               We would love to hear from you.
             </motion.p>
             
+            {submitSuccess && (
+              <motion.div 
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4"
+              >
+                Thank you for your message! We'll get back to you soon.
+              </motion.div>
+            )}
+            
             <motion.form 
+              onSubmit={handleSubmit}
               initial={{ opacity: 0 }}
               animate={isInView ? { opacity: 1 } : { opacity: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -99,6 +164,9 @@ export const Contact = (): React.ReactElement => {
                   type="email" 
                   className="w-full border border-gray-200 rounded-md p-3" 
                   placeholder=""
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
                 />
               </motion.div>
               
@@ -113,6 +181,9 @@ export const Contact = (): React.ReactElement => {
                   type="text" 
                   className="w-full border border-gray-200 rounded-md p-3" 
                   placeholder=""
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                 />
               </motion.div>
               
@@ -126,6 +197,9 @@ export const Contact = (): React.ReactElement => {
                   id="message"
                   className="w-full border border-gray-200 rounded-md p-3 min-h-[150px]" 
                   placeholder=""
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                 />
               </motion.div>
               
@@ -139,6 +213,8 @@ export const Contact = (): React.ReactElement => {
                   type="checkbox" 
                   id="subscribe" 
                   className="h-4 w-4 text-red-600 focus:ring-red-500 border-gray-300 rounded"
+                  checked={formData.subscribe}
+                  onChange={handleCheckboxChange}
                 />
                 <label htmlFor="subscribe" className="text-sm text-gray-700">
                   Subscribe me to your newsletter
@@ -154,8 +230,9 @@ export const Contact = (): React.ReactElement => {
                 <Button 
                   type="submit"
                   className="w-full bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium py-2 h-auto rounded-md cursor-pointer"
+                  disabled={isSubmitting}
                 >
-                  Submit
+                  {isSubmitting ? 'Sending...' : 'Submit'}
                 </Button>
               </motion.div>
             </motion.form>
