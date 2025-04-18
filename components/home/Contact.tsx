@@ -45,7 +45,7 @@ export const Contact = (): React.ReactElement => {
     );
     
     // Open mailto link
-    window.location.href = `mailto:chaaparide@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:contact@chaaparide.com?subject=${subject}&body=${body}`;
     
     // Show success message and reset form
     setTimeout(() => {
