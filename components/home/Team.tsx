@@ -8,80 +8,82 @@ import { fadeInUp, scaleUp, staggerContainer } from "@/animations/variants";
 
 interface TeamMemberProps {
   imageSrc: string;
-  name?: string;
-  role?: string;
+  name: string;
   index: number;
   isInView: boolean;
 }
 
-const TeamMember: React.FC<TeamMemberProps> = ({ imageSrc, name, role, index, isInView }) => {
+const TeamMember: React.FC<TeamMemberProps> = ({ imageSrc, name, index, isInView }) => {
   return (
-    <motion.div 
+    <motion.div
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={scaleUp}
       transition={{ delay: 0.2 * index, duration: 0.6 }}
-      className="flex flex-col"
+      className="flex flex-col items-center"
     >
-      <div className="bg-[#FFF5F5] aspect-square w-full rounded-lg overflow-hidden">
+      <div className="rounded-full overflow-hidden w-40 h-40 md:w-48 md:h-48 shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl bg-white flex items-center justify-center">
         {imageSrc && (
-          <Image 
-            src={imageSrc} 
-            alt={name || "Team member"} 
+          <Image
+            src={imageSrc}
+            alt={name}
             className="w-full h-full object-cover"
-            height={400}
-            width={400}
+            height={192}
+            width={192}
+            priority
           />
         )}
       </div>
-      {name && <h3 className="mt-3 text-xl font-medium text-white">{name}</h3>}
-      {role && <p className="text-gray-300">{role}</p>}
+      <h3 className="mt-5 text-lg md:text-xl font-extrabold text-center text-black uppercase tracking-wide">
+        {name}
+      </h3>
     </motion.div>
   );
 };
 
 export const Team = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
-  
+
   const teamMembers = [
-    { id: 1, imageSrc: "/druxamb.png", name: "Muhammad Amoo", role: "Frontend Engineer" },
-    { id: 2, imageSrc: "/diana.png", name: "Najuma Diana", role: "Designer, Product Validation Engineer" },
-    { id: 3, imageSrc: "/kodjo.png", name: "Labore Kodjo Agbetisassi", role: "Backend Engineer" },
+    { id: 1, imageSrc: "/kodjo.png", name: "Labore Agbetsiassi" },
+    { id: 2, imageSrc: "/diana.png", name: "Najjuma Diana" },
+    { id: 3, imageSrc: "/druxamb.png", name: "Muhammad Amoo" },
   ];
 
   return (
-    <motion.div 
+    <motion.section
       ref={ref}
-      className="w-full bg-black text-white py-16 px-4 md:px-8 lg:px-16 xl:px-40"
+      className="w-full bg-white text-black py-12 px-4 md:px-8 lg:px-16 xl:px-40"
     >
-      <div className="max-w-[1440px] mx-auto">
-        <motion.h2 
+      <div className="max-w-[1440px] min-h-[515px] mx-auto flex flex-col items-center">
+        <motion.h2
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={fadeInUp}
-          className="text-5xl font-bold text-center mb-16"
+          className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#C80000]"
         >
-          The <span className="text-rose-300">Team</span>
+          Building Together
         </motion.h2>
-        
-        <motion.div 
+        <p className="text-center text-base md:text-lg mb-10 md:mb-16 font-medium text-black/80 max-w-3xl">
+          At the heart of Chaapa Ride is a diverse and passionate team of builders, dreamers, and doers committed to transforming how Africa moves.
+        </p>
+        <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="flex flex-col md:flex-row gap-12 w-full justify-center items-center"
         >
           {teamMembers.map((member, index) => (
-            <TeamMember 
+            <TeamMember
               key={member.id}
               imageSrc={member.imageSrc}
               name={member.name}
-              role={member.role}
               index={index}
               isInView={isInView}
             />
           ))}
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
