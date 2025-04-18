@@ -15,19 +15,19 @@ export const Footer = (): React.ReactElement => {
   return (
     <motion.footer 
       ref={ref}
-      className="w-full bg-white"
+      className="w-full bg-[#F6F3F3]"
     >
       <div className="max-w-[1440px] mx-auto px-4 md:px-8 lg:px-16 xl:px-40 py-24 min-h-[515px]">
         <motion.div 
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-4 gap-10"
+          className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left"
         >
           {/* Logo and social icons */}
           <motion.div 
             variants={fadeInUp}
-            className="space-y-6"
+            className="space-y-6 w-fit mx-auto md:m-0"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -165,7 +165,7 @@ export const Footer = (): React.ReactElement => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <Button className="bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium px-8 py-4 h-auto rounded-md cursor-pointer" onClick={() => window.location.href = "https://tally.so/r/w4OkD5"}>
+              <Button className="bg-gradient-to-r from-[#8e0606] to-[#E30613] hover:opacity-90 text-white font-medium px-8 py-4 h-auto rounded-md cursor-pointer" onClick={() => window.open('https://tally.so/r/w4OkD5', '_blank')}>
                 Join our Waitlist
               </Button>
             </motion.div>

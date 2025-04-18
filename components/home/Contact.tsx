@@ -76,7 +76,7 @@ export const Contact = (): React.ReactElement => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={fadeInLeft}
-          className="bg-[#E30613] text-white py-16 px-4 md:px-8 lg:px-16 xl:px-40 flex flex-col items-center md:items-end justify-center text-center md:text-left"
+          className="bg-gradient-to-t from-[#670101] to-[#E30613] text-white py-16 px-4 md:px-8 lg:px-16 xl:px-40 flex flex-col items-center md:items-end justify-center text-center md:text-left"
         >
           <div className="max-w-md text-center md:text-right">
             <motion.h2 
@@ -103,8 +103,8 @@ export const Contact = (): React.ReactElement => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              <Button className="bg-gradient-to-r from-white to-rose-100 hover:opacity-90 text-[#E30613] font-medium text-xl px-10 py-3 h-auto rounded-md cursor-pointer">
-                Learn more
+              <Button className="bg-gradient-to-r from-white to-rose-100 hover:opacity-90 text-[#8e0606] font-medium text-xl px-10 py-3 h-auto rounded-md cursor-pointer" onClick={() => window.open('https://calendly.com/chaaparide/', '_blank')}>
+                Schedule a Call
               </Button>
             </motion.div>
           </div>
@@ -229,7 +229,7 @@ export const Contact = (): React.ReactElement => {
               >
                 <Button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:opacity-90 text-white font-medium py-2 h-auto rounded-md cursor-pointer"
+                  className="w-full bg-gradient-to-r from-[#670101] to-[#E30613] hover:opacity-90 text-white font-medium py-2 h-auto rounded-md cursor-pointer"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Submit'}
