@@ -3,6 +3,7 @@ import { Navbar } from "@/components/home/Navbar";
 import { Welcome } from "@/components/home/Welcome";
 import { About } from "@/components/home/About";
 import { Team } from "@/components/home/Team";
+import { Boda } from "@/components/home/Boda";
 import { Contact } from "@/components/home/Contact";
 import { Footer } from "@/components/home/Footer";
 
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="w-full">
       <Navbar />
       <Hero />
+      <Boda />
       <Welcome />
       <About />
       <Team />

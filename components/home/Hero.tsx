@@ -30,7 +30,7 @@ export const Hero = (): JSX.Element => {
           We are your trusted companion when you land in a new country, no stress, no conversion rates, no feeling lost. Just order for a ride like a local.
         </p>
         <button
-          className="px-8 py-3 rounded-lg text-white font-semibold text-base md:text-lg bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:from-[#E30613] hover:to-[#FF5757] transition-all duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400"
+          className="px-8 py-3 rounded-lg text-white font-semibold text-base md:text-lg bg-gradient-to-r from-[#FF5757] to-[#E30613] hover:from-[#E30613] hover:to-[#FF5757] transition-all duration-200 shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 cursor-pointer"
           onClick={() => window.location.href = 'https://tally.so/r/w4OkD5'}
         >
           Join Waitlist
