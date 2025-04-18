@@ -9,82 +9,91 @@ import { fadeInLeft, fadeInRight } from "@/animations/variants";
 
 export const About = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
-  
+
+  const features = [
+    {
+      title: "No exchange needed",
+      desc: "Use your own currency, we handle the rest.",
+    },
+    {
+      title: "No local SIM",
+      desc: "Just land and ride - no setups or delays.",
+    },
+    {
+      title: "Borderless Payments",
+      desc: "Pay for rides in your local currency anywhere",
+    },
+  ];
+
   return (
-    <motion.div 
+    <motion.section
       ref={ref}
-      className="w-full bg-[#E30613] text-white"
+      className="w-full bg-[#FFFCFC] py-16 px-4 md:px-8 lg:px-16 xl:px-40"
     >
-      <div className="max-w-[1440px] w-full mx-auto py-16 px-4 md:px-8 lg:px-16 xl:px-40">
-        <div className="flex flex-col md:flex-row items-center gap-10">
-          {/* Left content */}
-          <motion.div 
-            className="w-full md:w-1/2 space-y-6 pr-0 md:pr-8"
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInLeft}
-          >
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-5xl font-bold"
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-8 items-center md:items-start">
+        {/* Left: Headline */}
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInLeft}
+          className="w-full md:w-1/2 flex flex-col text-center md:text-start justify-center md:justify-start"
+        >
+          <h2 className="text-[#B30202] text-4xl md:text-6xl font-extrabold leading-tight md:leading-[1.1] mb-6 md:mb-0" style={{whiteSpace: 'pre-line'}}>
+            The world is open,
+            <br />explore it {""}
+            <br className="hidden md:block" />like home.
+          </h2>
+        </motion.div>
+        {/* Right: Feature Cards */}
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={fadeInRight}
+          className="w-full md:w-1/2 flex flex-col gap-6"
+        >
+          {features.map((feature, idx) => (
+            <div
+              key={feature.title}
+              className="bg-white rounded-xl shadow-md px-6 py-5 text-left transition-transform duration-200 hover:shadow-lg hover:-translate-y-1 cursor-default border border-[#F4F4F4]"
             >
-              About us
-            </motion.h2>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-xl font-normal"
-            >
-              Chaapa Ride is redefining mobility with seamless, borderless payments for 
-              ride-hailing.
-            </motion.p>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl font-normal mt-6"
-            >
-              We&apos;re building a future where paying for cabs and Boda Bodas is as easy as 
-              tapping a button, powered by blockchain but accessible to everyone, 
-              even without crypto knowledge.
-            </motion.p>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="pt-4"
-            >
-              <Button className="bg-white hover:bg-gray-100 text-[#E30613] font-semibold px-8 py-2 h-auto rounded-md text-lg cursor-pointer" onClick={() => window.location.href = "https://tally.so/r/w4OkD5"}>
-                Join our Waitlist
-              </Button>
-            </motion.div>
-          </motion.div>
-          
-          {/* Right image */}
-          <motion.div 
-            className="w-full md:w-1/2"
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            variants={fadeInRight}
-          >
-            <div className="rounded-lg overflow-hidden">
-              <Image
-                height={500}
-                width={600}
-                src="/boda-riders.svg" 
-                alt="Boda Boda riders on motorcycles" 
-                className="w-full h-auto object-cover"
-              />
+              <div className="font-bold text-gray-900 text-lg mb-1">
+                {feature.title}
+              </div>
+              <div className="text-gray-500 text-sm md:text-base font-normal">
+                {feature.desc}
+              </div>
             </div>
-          </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+    {/* New Section: Drive with freedom */}
+    <section className="w-full bg-white py-16 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-y-20">
+        {/* Left: Image */}
+        <div className="w-full flex justify-center">
+            <Image
+              src="/cab-rider.png"
+              alt="Smiling driver with red car"
+              width={520}
+              height={360}
+              className="w-full h-auto object-cover "
+              priority
+            />
+        </div>
+        {/* Right: Text */}
+        <div className="w-full flex flex-col items-center md:items-end text-center md:text-right">
+          <h3 className="text-4xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-[#B30202] to-[#FF6B6B] bg-clip-text text-transparent drop-shadow-[0_2px_2px_rgba(255,107,107,0.15)]">
+              Drive with freedom<br />and get your <br /> full value.
+            </span>
+          </h3>
+          <p className="text-gray-600 text-base md:text-lg font-normal max-w-md">
+            Chaapa gives you fair earnings, low commissions,<br className="hidden md:inline" /> instant payouts.
+          </p>
         </div>
       </div>
-    </motion.div>
+    </section>
+    </motion.section>
   );
-};
+}
