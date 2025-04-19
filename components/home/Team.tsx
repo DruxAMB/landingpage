@@ -45,9 +45,9 @@ export const Team = (): React.ReactElement => {
   const { ref, isInView } = useScrollAnimation();
 
   const teamMembers = [
-    { id: 1, imageSrc: "/kodjo.png", name: "Labore Agbetsiassi" },
-    { id: 2, imageSrc: "/diana.png", name: "Najjuma Diana" },
-    { id: 3, imageSrc: "/druxamb.png", name: "Muhammad Amoo" },
+    { id: 1, imageSrc: "/kodjo.jpg", name: "Labore Agbetsiassi" },
+    { id: 2, imageSrc: "/diana.jpg", name: "Najjuma Diana" },
+    { id: 3, imageSrc: "/druxamb.jpg", name: "Muhammad Amoo" },
   ];
 
   return (
