@@ -29,11 +29,12 @@ export const Navbar = () => {
       <div className="flex items-center justify-between h-20">
         {/* Logo */}
         <Image
-          className="max-w-[203px] h-auto object-contain"
+          className="max-w-[203px] h-auto object-contain cursor-pointer"
           alt="Chapa logo"
           height={100}
           width={100}
           src="/logo.png"
+          onClick={() => window.location.href = '/'}
         />
 
         {/* Desktop Navigation */}
