@@ -10,16 +10,17 @@ import { Separator } from "@/components/ui/separator";
 import { MenuIcon, X } from "lucide-react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Navigation menu items
   const navItems = [
-    { label: "Ride", active: true },
-    { label: "Drive", active: false },
-    { label: "About", active: false },
-    { label: "Help", active: false },
+    { label: "About", active: true, href: "#about" },
+    { label: "Welcome", active: false, href: "#welcome" },
+    { label: "Ride", active: false, href: "#ride" },
+    { label: "Contact", active: false, href: "#contact" },
   ];
   return (
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm">
@@ -40,13 +41,14 @@ export const Navbar = () => {
           <NavigationMenuList className="flex gap-8">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
-                <span
+                <Link
+                  href={item.href}
                   className={`font-medium text-base ${
                     item.active ? "text-gray-700" : "text-gray-400"
                   }`}
                 >
                   {item.label}
-                </span>
+                </Link>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
@@ -88,15 +90,15 @@ export const Navbar = () => {
         <div className="md:hidden bg-white border-t">
           <nav className="flex flex-col p-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href="#"
+                href={item.href}
                 className={`py-2 px-4 text-base ${
                   item.active ? "text-gray-700" : "text-gray-400"
                 }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button className="mt-4 w-full rounded-[10px] bg-gradient-to-t from-[rgba(237,2,2,1)] to-[#670101] cursor-pointer" onClick={() => window.open('https://calendly.com/chaaparide/', '_blank')}>
               Connect

@@ -12,6 +12,7 @@ export const Welcome = (): React.ReactElement => {
     <motion.section
       ref={ref}
       className="w-full min-h-[80vh] flex flex-col items-center justify-center text-center px-4 py-20 md:py-32"
+      id="welcome"
       style={{
         background:
           "radial-gradient(circle at 50% 50%, #FFA9A9 10%, #B30202 100%)",

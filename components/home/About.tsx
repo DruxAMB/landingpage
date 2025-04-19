@@ -27,7 +27,7 @@ export const About = (): React.ReactElement => {
   return (
     <motion.section
       ref={ref}
-      className="w-full bg-[#FFFCFC] py-16 px-4 md:px-8 lg:px-16 xl:px-40"
+      className="w-full bg-[#FFFCFC] py-16 px-4 md:px-8 lg:px-16 xl:px-40" id="about"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-8 items-center md:items-start">
         {/* Left: Headline */}

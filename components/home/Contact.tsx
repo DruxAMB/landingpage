@@ -69,6 +69,7 @@ export const Contact = (): React.ReactElement => {
     <motion.div 
       ref={ref}
       className="w-full"
+      id="contact"
     >
       <div className="grid grid-cols-1 md:grid-cols-2">
         {/* Left side - Red background with text */}
