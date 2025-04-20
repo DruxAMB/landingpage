@@ -60,7 +60,7 @@ export const Team = (): React.ReactElement => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={fadeInUp}
-          className="text-4xl md:text-5xl font-extrabold text-center mb-4 text-[#C80000]"
+          className="text-4xl md:text-5xl font-extrabold text-center mb-4 bg-gradient-to-r from-[#B30202] to-[#FF6B6B] bg-clip-text text-transparent"
         >
           Building Together
         </motion.h2>

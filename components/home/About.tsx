@@ -37,7 +37,7 @@ export const About = (): React.ReactElement => {
           variants={fadeInLeft}
           className="w-full md:w-1/2 flex flex-col text-center md:text-start justify-center md:justify-start"
         >
-          <h2 className="text-[#B30202] text-4xl md:text-6xl font-extrabold leading-tight md:leading-[1.1] mb-6 md:mb-0" style={{whiteSpace: 'pre-line'}}>
+          <h2 className="bg-gradient-to-r from-[#B30202] to-[#FF6B6B] bg-clip-text text-transparent text-4xl md:text-6xl font-extrabold leading-tight md:leading-[1.1] mb-6 md:mb-0" style={{whiteSpace: 'pre-line'}}>
             The world is open,
             <br />explore it {""}
             <br className="hidden md:block" />like home.

@@ -12,10 +12,10 @@ export const Hero = (): JSX.Element => {
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <span className="text-gray-500 text-base mb-2 mt-2">Chaapa Ride</span>
-        <h1 className="text-3xl md:text-5xl font-extrabold mb-6">
-          <span className="text-[#B30202]">Feel at home </span>
+        <h1 className="text-3xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-[#B30202] to-[#FF6B6B] bg-clip-text text-transparent">
+          <span>Feel at home </span>
           <br className="lg:hidden"/>
-          <span className="text-[#FF6B6B]">anywhere you land.</span>
+          <span>anywhere you land.</span>
         </h1>
         <p className="text-gray-700 text-base md:text-lg font-normal mb-12 max-w-2xl mx-auto">
           We are your trusted companion when you land in a new country, no stress, no conversion rates, no feeling lost. Just order for a ride like a local.

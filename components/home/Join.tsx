@@ -5,7 +5,7 @@ export const Join = () => {
   return (
     <section className="w-full bg-white py-16 px-4 flex flex-col items-center justify-center text-center" id="ride">
       {/* Headline */}
-      <h2 className="text-[#B30202] text-3xl md:text-5xl font-extrabold mb-6 md:mb-6 max-w-3xl mx-auto">
+      <h2 className="bg-gradient-to-r from-[#B30202] to-[#FF6B6B] bg-clip-text text-transparent text-3xl md:text-5xl font-extrabold mb-6 md:mb-6 max-w-3xl mx-auto">
         Chaapa Ride is transforming <br className="hidden md:block" /> Africa&apos;s mobility industry.
       </h2>
       {/* Subheadline */}
