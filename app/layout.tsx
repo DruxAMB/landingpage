@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
@@ -28,6 +29,11 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} antialiased`}
       >
+        <Script
+          src="https://tally.so/widgets/embed.js"
+          strategy="afterInteractive"
+          async
+        />
         {children}
       </body>
     </html>

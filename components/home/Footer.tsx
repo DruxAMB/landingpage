@@ -165,7 +165,7 @@ export const Footer = (): React.ReactElement => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              <Button className="bg-gradient-to-r from-[#8e0606] to-[#E30613] hover:opacity-90 text-white font-medium px-8 py-4 h-auto rounded-md cursor-pointer" onClick={() => window.open('https://tally.so/r/w4OkD5', '_blank')}>
+              <Button className="bg-gradient-to-r from-[#8e0606] to-[#E30613] hover:opacity-90 text-white font-medium px-8 py-4 h-auto rounded-md cursor-pointer" data-tally-open="w4OkD5" data-tally-overlay="1" data-tally-emoji-text="👋">
                 Join our Waitlist
               </Button>
             </motion.div>
